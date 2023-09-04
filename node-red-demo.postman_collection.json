@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "648c1156-e45f-4365-8cc4-08583b094b54",
+		"name": "node-red-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13014890"
+	},
+	"item": [
+		{
+			"name": "upload file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/javi/Downloads/testocr.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{host}}:1880/upload-file",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "1880",
+					"path": [
+						"upload-file"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
