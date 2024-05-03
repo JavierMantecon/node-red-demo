@@ -1,4 +1,5 @@
 <?php
+
 use Slim\App;
 use Src\Shared\Infraestructure\ErrorHandlerMiddleware;
 

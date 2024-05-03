@@ -1,7 +1,10 @@
 <?php
+
 use Psr\Container\ContainerInterface;
-use Sandbox\ImageContent\Application\Extract\ImageContentExtractor;
-use Sandbox\ImageContent\Infrastructure\TesseractExtractor;
+use Sandbox\Image\Domain\Cropper;
+use Sandbox\Image\Domain\TextExtractor;
+use Sandbox\Image\Infrastructure\Services\ImagickCropper;
+use Sandbox\Image\Infrastructure\Services\TesseractTextExtractor;
 use Slim\App;
 use Slim\Factory\AppFactory;
 
@@ -15,7 +18,10 @@ return [
 
         return AppFactory::create();
     },
-    TesseractExtractor::class => function () {
-        return new TesseractExtractor();
+    TextExtractor::class => function () {
+        return new TesseractTextExtractor();
+    },
+    Cropper::class => function () {
+        return new ImagickCropper();
     },
 ];

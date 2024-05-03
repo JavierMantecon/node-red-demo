@@ -10,7 +10,7 @@ services:
     networks:
       - node-red-demo
     volumes:
-      - node-red-data:/data
+      - ./node-red-data:/data
   php:
     container_name: php
     build:
@@ -39,8 +39,5 @@ services:
       - ./etc/infrastructure/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
-volumes:
-  node-red-data:
-
 networks:
   node-red-demo:
