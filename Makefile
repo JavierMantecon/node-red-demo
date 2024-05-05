@@ -1,3 +1,4 @@
+.PHONY: run composer-install
 run:
 	docker compose up -d
 composer-install:
